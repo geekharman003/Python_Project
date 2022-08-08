@@ -20,7 +20,7 @@ class NewsApp:
         self.root = Tk()
         self.root.geometry('450x600')
     
-        self.root.title('Mera News App')
+        self.root.title('News App')
         self.root.configure(background='black')
 
     def clear(self):
