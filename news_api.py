@@ -1,9 +1,7 @@
-import io
 import webbrowser
 import requests
 from tkinter import *
-from urllib.request import urlopen
-from PIL import ImageTk,Image
+
 
 class NewsApp:
 
@@ -33,17 +31,18 @@ class NewsApp:
         self.clear()
 
       
-        Topheading=Label(self.root,text="Top News",bg='Red',fg='white')
-        Topheading.config(font=('veedana',20))
+        Topheading=Label(self.root,text="Top Headlines",bg='Red',fg='white')
+        Topheading.config(font=('verdana',20))
         Topheading.pack(pady=(3))
+     
 
-        headlines = Label(self.root,text=self.data['articles'][index]['title'],width=30,bg="black",fg="white",wraplength=350)
+        headlines = Label(self.root,text=self.data['articles'][index]['title'],width=30,bg="black",fg="white",wraplength=400)
         headlines.pack(pady=(10,30))
-        headlines.config(font=('verdana',18))
+        headlines.config(font=('Helvetica',18))
 
-        details = Label(self.root, text=self.data['articles'][index]['description'], bg='black', fg='white', wraplength=350,justify='center')
+        details = Label(self.root, text=self.data['articles'][index]['description'], bg='black', fg='white', wraplength=400,justify='center')
         details.pack(pady=(50))
-        details.config(font=('verdana', 12))
+        details.config(font=('Helvetica', 15))
 
         frame = Frame(self.root,bg='black')
         frame.pack(expand=True,fill=BOTH)
